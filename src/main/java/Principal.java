@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculora.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -7,6 +8,7 @@ public class Principal {
         filme.setNome("300");
         filme.setAnoDeLancamento(2019);
         filme.exibeFichaTecnica();
+        filme.setDuracaoEmMinutos(180);
 
         filme.avalia(8);
         filme.avalia(5);
@@ -25,5 +27,19 @@ public class Principal {
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodios(50);
         System.out.println("Duração da série: " + lost.getDuracaoEmMinutos());
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme);
+        System.out.println(calculadora.getTempoTotal());
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Ace Ventura");
+        outroFilme.setAnoDeLancamento(1997);
+        outroFilme.exibeFichaTecnica();
+        outroFilme.setDuracaoEmMinutos(120);
+
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
     }
 }
