@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme = new Filme();
-        filme.setNome("300");
+        Filme filme = new Filme("300");
+        //filme.setNome("300");
         filme.setAnoDeLancamento(2019);
         filme.exibeFichaTecnica();
         filme.setDuracaoEmMinutos(180);
@@ -36,8 +36,8 @@ public class Principal {
         calculadora.inclui(filme);
         System.out.println(calculadora.getTempoTotal());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Ace Ventura");
+        Filme outroFilme = new Filme("Ace Ventura");
+        //outroFilme.setNome("Ace Ventura");
         outroFilme.setAnoDeLancamento(1997);
         outroFilme.exibeFichaTecnica();
         outroFilme.setDuracaoEmMinutos(120);
@@ -55,8 +55,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
+        Filme filmeDoPaulo = new Filme("Dogville");
+        //filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
