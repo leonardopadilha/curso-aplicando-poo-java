@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme = new Filme("300");
+        Filme filme = new Filme("300", 2019);
         //filme.setNome("300");
-        filme.setAnoDeLancamento(2019);
+        //filme.setAnoDeLancamento(2019);
         filme.exibeFichaTecnica();
         filme.setDuracaoEmMinutos(180);
 
@@ -23,9 +23,9 @@ public class Principal {
 
         System.out.println();
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
+        //lost.setNome("Lost");
+        //lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -36,9 +36,9 @@ public class Principal {
         calculadora.inclui(filme);
         System.out.println(calculadora.getTempoTotal());
 
-        Filme outroFilme = new Filme("Ace Ventura");
+        Filme outroFilme = new Filme("Ace Ventura", 1997);
         //outroFilme.setNome("Ace Ventura");
-        outroFilme.setAnoDeLancamento(1997);
+        //outroFilme.setAnoDeLancamento(1997);
         outroFilme.exibeFichaTecnica();
         outroFilme.setDuracaoEmMinutos(120);
 
@@ -55,10 +55,10 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme("Dogville");
+        Filme filmeDoPaulo = new Filme("Dogville", 2003);
         //filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
+        //filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
