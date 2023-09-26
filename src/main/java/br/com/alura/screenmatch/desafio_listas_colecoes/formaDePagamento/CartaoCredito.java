@@ -1,26 +1,15 @@
 package br.com.alura.screenmatch.desafio_listas_colecoes.formaDePagamento;
 
-public class Cartao extends MetodoPagamento {
-    private double limiteCartao;
-    private String numeroCartao;
-    private String senha;
+public class CartaoCredito extends MetodoPagamento {
 
-    public Cartao(double saldo, double limiteCartao, String numeroCartao, String senha) {
+    public CartaoCredito(double saldo) {
         super(saldo);
-        this.limiteCartao = limiteCartao;
-        this.numeroCartao = numeroCartao;
-        this.senha = senha;
     }
 
-    public double getLimiteCartao() {
-        return limiteCartao;
-    }
-
-    public String getNumeroCartao() {
-        return numeroCartao;
-    }
-
-    public String getSenha() {
-        return senha;
+    public double descontoCartao(double valor) {
+        if (valor > saldo) {
+            return saldo;
+        }
+        return saldo -= valor;
     }
 }

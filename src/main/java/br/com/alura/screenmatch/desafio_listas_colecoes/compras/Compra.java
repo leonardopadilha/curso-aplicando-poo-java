@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.desafio_listas_colecoes.formaDePagamento;
+package br.com.alura.screenmatch.desafio_listas_colecoes.compras;
 
 import br.com.alura.screenmatch.desafio_listas_colecoes.formaDePagamento.MetodoPagamento;
 
@@ -19,7 +19,7 @@ public class Compra {
         if (valorPagamento > metodoPagamento.saldo()) {
             return "Saldo insuficiente";
         }
-        metodoPagamento.saldo() -= valorPagamento;
+        metodoPagamento.descontoCartao(valorPagamento);
         return "Compra realizada!";
     }
 }
